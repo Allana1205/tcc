@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tecnologia Assistiva para Daltônicos</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+<header>
+  <div class="parallax1">  
+    <div class="conteudo-titulo">
+      <span class="titulo">Tecnologia Assistiva para Daltônicos</span>
+    </div>
+  </div>
+
+  <!-- Agrupamos a linha + menu dentro da mesma div -->
+  <div class="menu-container">
+    <div class="linha-decorativa"></div>
+
+    <nav id="menu">
+      <a href="index.html"> Home </a>
+      <a href="trabalho.html"> Nosso trabalho </a>
+      <a href="daltonismo.html"> Daltonismo </a>
+      <a href="autoras.html"> Autoras </a>
+      <a href="contato.html"> Contato </a>
+    </nav>
+  </div>
+</header>
+
+
+
+  <main class="conteudo">
+    <section class="texto">
+      <h2>Bem-vindo!</h2>
+      <p>Este espaço foi desenvolvido como parte do componente curricular Prática Profissional Articulada (PPA), do curso técnico integrado em Informática do Instituto Federal da Bahia (IFBA), campus Valença.</p>
+      <p>Nosso objetivo é apresentar e divulgar o Trabalho de Conclusão de Curso (TCC), que aborda o tema "Desenvolvimento de Tecnologia Assistiva para Daltônicos: Detecção e Transcrição de Cores".</p>
+      <p>O projeto busca facilitar o acesso à informação visual para pessoas com protanopia, um dos tipos de daltonismo, desenvolvendo uma ferramenta capaz de adaptar cores em imagens artificiais e imagens em tempo real para melhorar a percepção e inclusão digital.</p>
+      <p>Este trabalho foi orientado pelo Prof. Me. Rodolfo Costa Cezar da Silva e contou com a supervisão dos docentes responsáveis pela PPA, especialmente pelo Prof. Joel Eugenio Cordeiro Júnior.</p>
+    
+      <h4>Professores responsáveis pela PPA:</h4>
+      <ul>
+        <li>André Luiz Romano Madureira</li>
+        <li>Geysa Gonçalves Rodrigues de Souza</li>
+        <li>Joel Eugenio Cordeiro Júnior</li>
+        <li>Rogério Lacerda Medina</li>
+      </ul>
+    
+    </section>
+
+    <aside class="caixa">
+      <img src=" " alt="Logo PPA">
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; Desenvolvido por Allana Sophia e Vitória Aleluia — Outubro de 2025.</p>
+  </footer>
+
+</body>
+
+
+<script>
+  window.addEventListener('scroll', function() {
+    const menuContainer = document.querySelector('.menu-container');
+    const parallax = document.querySelector('.parallax1');
+    const limite = parallax.offsetHeight;
+
+    if (window.scrollY >= limite) {
+      menuContainer.classList.add('fixed');
+    } else {
+      menuContainer.classList.remove('fixed');
+    }
+  });
+</script>
+
+
+</html>
