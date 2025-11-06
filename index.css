@@ -113,9 +113,9 @@ nav {
   margin-top: 0;
 }
 
- 
+ /*essa parte é onde tpa as imagens, se quiser altera os tamanhos tb*/
 .caixa {
-  width: 20%;
+  width: 30%;
   background-color: #e8eef6;
   border-left: 6px solid #e63946;
   padding: 20px;
