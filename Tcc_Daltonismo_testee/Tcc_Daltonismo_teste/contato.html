@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tecnologia Assistiva para Daltônicos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+  <div class="head">
+      <div class="topo">
+        <img src="Imagens/logo.png" alt="logo do if" class="logo">
+        <h1>Tecnologia Assistiva para Daltônicos</h1>
+      </div>
+
+        <div class="linha-decorativa"></div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="trabalho.html">Nosso trabalho</a>
+        <a href="daltonismo.html">Daltonismo</a>
+        <a href="autoras.html">Autoras</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="conteudo">
+    <section class="texto">
+      <h2>Entre em contato:</h2>
+      <p>Quer saber mais sobre o projeto ou trocar ideias sobre tecnologia assistiva?</p>
+
+          <!-- fnformações de contato -->
+      <div class="contato-info">
+              <p>📧 | Entre em contato conosco pelo e-mail:</p>
+        <p><i class="fa fa-envelope"></i><a href="mailto:tccdaltonismo@gmail.com"><strong>tccdaltonismo@gmail.com</strong></a></p>
+      </div>
+
+      <!-- formulário divo-->
+       <p>Ou envie uma mensagem para nós! 💬</p>
+      <form id="contact-form" class="form-contato">
+        <label>Nome:</label>
+        <input type="text" name="name" placeholder="Seu nome" required>
+
+        <label>E-mail:</label>
+        <input type="email" name="email" placeholder="Seu email" required>
+
+        <label>Mensagem:</label>
+        <textarea name="message" placeholder="Escreva sua mensagem" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+      <p id="status"></p>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy;Desenvolvido por Allana Sophia e Vitória Aleluia — Outubro de 2025.</p>
+  </footer>
+
+<!--pra receber a msg do formulário divo-->
+<script>
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('status');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value
+    };
+
+    fetch('https://formspree.io/f/xqayyevz', { 
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    .then(response => {
+      if (response.ok) {
+        status.innerHTML = "Mensagem enviada com sucesso!";
+        form.reset();
+      } else {
+        status.innerHTML = "Erro ao enviar a mensagem. Tente novamente.";
+      }
+    })
+    .catch(error => {
+      status.innerHTML = "Erro ao enviar a mensagem. Tente novamente.";
+    });
+  });
+</script>
+
+</body>
+</html>

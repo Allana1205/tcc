@@ -1,0 +1,261 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background-color: #f8f8f5;
+  color: #222;
+  overflow-x: hidden;
+  padding: 200px 0px 0px;
+}
+
+/* ===== TOPO ===== */
+
+.head{
+  background-color: #002b5c;
+  color: white;
+  text-align: center;
+  padding: 30px 10px;
+  position: fixed; /* fixa no topo da tela sempre */
+  top: 0;          /* colado no topo */
+  left: 0;         /* alinhado à esquerda */
+  width: 100%;     /* ocupa toda largura */
+  z-index: 1000;   /* fica acima de tudo */
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  left: 58px;
+  width: 200px; /*  não sei se aumenta, tem que ver uma imagem com fundo transparente */
+  height: auto;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8em;
+  letter-spacing: 1px;
+}
+
+nav {
+  margin-top: 20px;
+}
+
+nav a {
+  color: rgb(244, 241, 241);
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin: 0 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+nav a:hover {
+  text-decoration: underline;  
+  color: #002b5c;
+  background-color: rgb(244, 241, 241);
+}
+
+
+.linha-decorativa {
+  height: 6px;
+  width: 92%;
+  margin: 15px auto;
+  border-radius: 5px;
+  background: linear-gradient(to right, #ff4b4b, #ffd93d, #3ddc97, #3d8bff);
+}
+
+/* ===== CONTEÚDO ===== */
+.conteudo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 0 30px;
+  position: relative;
+}
+
+.texto {
+  width: 60%;
+}
+
+.texto h2 {
+  color: #002b5c;
+  margin-top: 0;
+}
+
+.texto h3 {
+  color: #002b5c;
+  margin-top: 0;
+}
+
+.texto h4 {
+  color: #002b5c;
+  margin-top: 0;
+}
+
+ /*essa parte é onde tpa as imagens, se quiser altera os tamanhos tb*/
+.caixa {
+  width: 20%;
+  background-color: #e8eef6;
+  border-left: 6px solid #e63946;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.caixa figure {
+  display: block; /* garante que figure seja bloco, não flex */
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.caixa figcaption {
+  display: block; /* força figcaption a aparecer abaixo da imagem */
+  font-size: 0.9em;
+  color: #0b2545;
+  margin-top: 8px;
+  font-style: italic;
+  background-color: rgba(230, 57, 70, 0.1);
+  border-left: 3px solid #e63946;
+  border-radius: 5px;
+  padding: 6px 10px;
+  text-align: center;
+  width: 90%;
+}
+
+
+.caixa img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.imagem-menor { 
+  width: 80%;
+}
+
+/* ===== TRIÂNGULOS COLORIDINHOS ===== */
+.conteudo::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: -100px;
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 150px solid #e63946;
+  opacity: 0.25;
+  transform: rotate(-20deg);
+}
+
+.conteudo::after {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  right: -120px;
+  width: 0;
+  height: 0;
+  border-left: 180px solid transparent;
+  border-right: 180px solid transparent;
+  border-top: 180px solid #002b5c;
+  opacity: 0.2;
+  transform: rotate(15deg);
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+  font-size: 14px;
+  text-align: center;
+  padding: 15px 0;
+  background-color: #0b2545;
+  color: #fff;
+  margin-top: 50px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-top: auto;
+}
+
+/* ===== CONTATO ===== */
+
+body.contato {
+  background: linear-gradient(120deg, #e8eef6, #f0f4ff);
+  font-family: Arial, sans-serif;
+}
+
+.contato-principal {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.contato-principal h2 {
+  color: #0b2545;
+  margin-bottom: 15px;
+}
+
+.form-contato {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.form-contato input, .form-contato textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.form-contato button {
+  background-color: #e63946;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.form-contato button:hover {
+  background-color: #d62828;
+}
+
+.contato-info p {
+  font-size: 1em;
+  color: #0b2545;
+  margin: 10px 0;
+}
+
+.contato-info a {
+  color: #e63946;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contato-info a:hover {
+  color: #d62828;
+  text-decoration: underline;
+}
+
+
